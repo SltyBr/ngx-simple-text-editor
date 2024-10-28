@@ -5,6 +5,6 @@
 > Simple native text editor component for Angular 9+
 
 
-[NPM](https://www.npmjs.com/package/ngx-simple-text-editor)
-[GitHub](https://github.com/Raiper34/ngx-simple-text-editor)
+[NPM](https://www.npmjs.com/package/bii-text-editor)
+[GitHub](https://github.com/Raiper34/bii-text-editor)
 [Get Started](instalation.md)

@@ -7,7 +7,7 @@ The editor has got only one @Input with config object, which is optional.
 The config object is defined by placeholder and buttons, both are optional and can be omitted.
 ```typescript
 import { Component } from '@angular/core';
-import {EditorConfig, ST_BUTTONS} from 'ngx-simple-text-editor';
+import {EditorConfig, ST_BUTTONS} from 'bii-text-editor';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +24,7 @@ export class AppComponent {
 ```
 You can pass all predefined buttons with predefined order, or you can use only buttons you want with order as you want.
 ```typescript
-import {EditorConfig, UNDO_BUTTON, SEPARATOR, BOLD_BUTTON, ITALIC_BUTTON} from 'ngx-simple-text-editor';
+import {EditorConfig, UNDO_BUTTON, SEPARATOR, BOLD_BUTTON, ITALIC_BUTTON} from 'bii-text-editor';
 ...
 config: EditorConfig = {
     buttons: [UNDO_BUTTON, SEPARATOR, BOLD_BUTTON, ITALIC_BUTTON],

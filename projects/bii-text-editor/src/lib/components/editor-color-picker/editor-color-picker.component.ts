@@ -1,6 +1,7 @@
-import {Component, Input, Output, EventEmitter} from '@angular/core';
+import {Component, Input, Output, EventEmitter, Inject} from '@angular/core';
 import {EditorColor} from '../../models/button';
 import {ExecCommand} from '../../models/exec-command';
+import { DOCUMENT } from '@angular/common';
 
 const DEFAULT_COLOR = '#000000';
 
@@ -15,7 +16,16 @@ export class EditorColorPickerComponent {
   @Input() state: string | number | boolean;
   @Output() command = new EventEmitter<{command: ExecCommand, value: string}>();
 
+  selectionRange: Range;
+
+  constructor(
+    @Inject(DOCUMENT) private readonly document: any
+  ) {}
+
   onCommand(command: ExecCommand, value: string): void {
+    if(this.selectionRange) {
+      this.loadSelection();
+    }
     this.command.emit({command, value});
   }
 
@@ -25,6 +35,18 @@ export class EditorColorPickerComponent {
       const hex = Number(x).toString(16);
       return hex.length === 1 ? '0' + hex : hex;
     }).join('');
+  }
+
+  private loadSelection(): void {
+    const selection = this.document.defaultView.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(this.selectionRange);
+    this.selectionRange = null;
+  }
+
+  public saveSelection(): void {
+    const selection = this.document.defaultView.getSelection();
+    this.selectionRange = selection.rangeCount === 0 ? null : selection.getRangeAt(0);
   }
 
 }

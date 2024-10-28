@@ -14,6 +14,10 @@
     background-color: $activeColor;
     color: white;
   }
+
+  .icon {
+    text-shadow: 0 0 1px #000;
+  }
 }
 
 .st-color-picker {

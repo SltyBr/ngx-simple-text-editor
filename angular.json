@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-simple-text-editor-app": {
+    "bii-text-editor-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngx-simple-text-editor-app",
+            "outputPath": "dist/bii-text-editor-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,18 +72,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "buildTarget": "ngx-simple-text-editor-app:build"
+            "buildTarget": "bii-text-editor-app:build"
           },
           "configurations": {
             "production": {
-              "buildTarget": "ngx-simple-text-editor-app:build:production"
+              "buildTarget": "bii-text-editor-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "ngx-simple-text-editor-app:build"
+            "buildTarget": "bii-text-editor-app:build"
           }
         },
         "test": {
@@ -107,40 +107,40 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngx-simple-text-editor-app:serve"
+            "devServerTarget": "bii-text-editor-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngx-simple-text-editor-app:serve:production"
+              "devServerTarget": "bii-text-editor-app:serve:production"
             }
           }
         }
       }
     },
-    "ngx-simple-text-editor": {
+    "bii-text-editor": {
       "projectType": "library",
-      "root": "projects/ngx-simple-text-editor",
-      "sourceRoot": "projects/ngx-simple-text-editor/src",
+      "root": "projects/bii-text-editor",
+      "sourceRoot": "projects/bii-text-editor/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ngx-simple-text-editor/tsconfig.lib.json",
-            "project": "projects/ngx-simple-text-editor/ng-package.json"
+            "tsConfig": "projects/bii-text-editor/tsconfig.lib.json",
+            "project": "projects/bii-text-editor/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ngx-simple-text-editor/tsconfig.lib.prod.json"
+              "tsConfig": "projects/bii-text-editor/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-simple-text-editor/src/test.ts",
-            "tsConfig": "projects/ngx-simple-text-editor/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-simple-text-editor/karma.conf.js"
+            "main": "projects/bii-text-editor/src/test.ts",
+            "tsConfig": "projects/bii-text-editor/tsconfig.spec.json",
+            "karmaConfig": "projects/bii-text-editor/karma.conf.js"
           }
         }
       }

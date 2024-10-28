@@ -3,13 +3,13 @@ Defining custom buttons is really simple, you just need to create a new constant
 The constant needs to consist of at least `type`, which is basically a type of button that will be rendered on the UI and `command`, which is an action, that will be performed.
 You can use a predefined ExecCommand enum for command definition.
 If you want to read more about exec commands, you can read [here](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand).
-Other required properties are derived from the given type and interfaces for all button types can be found [here](https://github.com/Raiper34/ngx-simple-text-editor/blob/main/projects/ngx-simple-text-editor/src/lib/models/button.ts).
+Other required properties are derived from the given type and interfaces for all button types can be found [here](https://github.com/Raiper34/bii-text-editor/blob/main/projects/bii-text-editor/src/lib/models/button.ts).
 
 
 For example, we can create our own custom button that adds preformatted and predefined strings into the editor.
 We need to define a new button type of `EditorDropdown` because we want to pick one string from many and add it to the editor config
 ```typescript
-import {EditorConfig, ExecCommand, Separator, ST_BUTTONS} from 'ngx-simple-text-editor';
+import {EditorConfig, ExecCommand, Separator, ST_BUTTONS} from 'bii-text-editor';
 
 export const CUSTOM: EditorDropdown = {
   type: ToolbarItemType.Dropdown, label: 'Custom', title: 'test custom', items: [
@@ -38,7 +38,7 @@ export const CUSTOM_INPUT: EditorInput =
   };
 ```
 
-The example of various default button types that have already been created in the editor and are the part of default config (full list [here](https://github.com/Raiper34/ngx-simple-text-editor/blob/main/projects/ngx-simple-text-editor/src/lib/constants/editor-buttons.ts)):
+The example of various default button types that have already been created in the editor and are the part of default config (full list [here](https://github.com/Raiper34/bii-text-editor/blob/main/projects/bii-text-editor/src/lib/constants/editor-buttons.ts)):
 ```ts
 export const UNDO_BUTTON: EditorButton = {type: ToolbarItemType.Button, command: ExecCommand.undo, icon: 'fas fa-undo', title: 'undo'};
 export const FORE_COLOR: EditorColor =

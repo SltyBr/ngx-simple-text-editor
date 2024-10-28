@@ -1,0 +1,16 @@
+{
+  "copyFiles": [
+    {
+      "from": "../../README.md",
+      "to": "../../dist/bii-text-editor/README.md"
+    },
+    {
+      "from": "../../CHANGELOG.md",
+      "to": "../../dist/bii-text-editor/CHANGELOG.md"
+    },
+    {
+      "from": "../../assets",
+      "to": "../../dist/bii-text-editor"
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 /*
- * Public API Surface of ngx-simple-text-editor
+ * Public API Surface of bii-text-editor
  */
 
-export * from './lib/ngx-simple-text-editor.module';
+export * from './lib/bii-text-editor.module';
 export * from './lib/components/editor/editor.component';
 export * from './lib/components/editor-button/editor-button.component';
 export * from './lib/components/editor-color-picker/editor-color-picker.component';

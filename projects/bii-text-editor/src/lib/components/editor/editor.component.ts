@@ -5,6 +5,7 @@ import {ST_BUTTONS} from '../../constants/editor-buttons';
 import {ToolbarItemType} from '../../models/button';
 import {CommandService} from '../../services/command.service';
 import {EditorConfig} from '../../models/config';
+import { ExecCommand } from '../../models/exec-command';
 
 const DEFAULT_CONFIG: EditorConfig = {
   placeholder: '',
@@ -70,6 +71,12 @@ export class EditorComponent implements AfterViewInit, ControlValueAccessor {
   execCommand(command: string, value?: any): void {
     this.contentEditable.nativeElement.focus();
     this.commandService.execCommand(command, value);
+
+    if (command === ExecCommand.createLink) {
+      var selection = document.getSelection();
+      this.document.execCommand('createLink', true, value);
+      (selection.anchorNode.parentElement as HTMLLinkElement).target = '_blank';
+    }
     this.fetchQueryCommandState();
   }
 

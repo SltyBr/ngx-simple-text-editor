@@ -1,0 +1,13 @@
+{
+  "name": "bii-text-editor",
+  "version": "1.0.2",
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": ">=16.0.0",
+    "@angular/core": ">=16.0.0",
+    "@fortawesome/fontawesome-free": "^6.2.1"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

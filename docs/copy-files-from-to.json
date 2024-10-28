@@ -8,7 +8,7 @@
       "to": "../dist/docs"
     },
     {
-      "from": "../dist/ngx-simple-text-editor-app/*",
+      "from": "../dist/bii-text-editor-app/*",
       "to": "../dist/docs/demo"
     },
     {

@@ -16,9 +16,9 @@
       "dom"
     ],
     "paths": {
-      "ngx-simple-text-editor": [
-        "dist/ngx-simple-text-editor/ngx-simple-text-editor",
-        "dist/ngx-simple-text-editor"
+      "bii-text-editor": [
+        "dist/bii-text-editor/bii-text-editor",
+        "dist/bii-text-editor"
       ]
     },
     "useDefineForClassFields": false

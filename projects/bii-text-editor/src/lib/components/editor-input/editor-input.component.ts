@@ -34,10 +34,19 @@ export class EditorInputComponent {
         this.loadSelection();
       }
       this.closeInputWindow();
-      this.command.emit({
-        command: this.button.command,
-        value: this.button.transform ? this.button.transform(this.value) : this.value
-      });
+
+      if (this.button.command === ExecCommand.createLink) {
+        const selection = this.document.getSelection();
+        this.command.emit({
+          command: ExecCommand.insertHTML,
+          value: `<a href="${this.value}" target="_blank">${selection}</a>`
+        });
+      } else {
+        this.command.emit({
+          command: this.button.command,
+          value: this.button.transform ? this.button.transform(this.value) : this.value
+        });
+      }
       this.value = '';
     }
   }

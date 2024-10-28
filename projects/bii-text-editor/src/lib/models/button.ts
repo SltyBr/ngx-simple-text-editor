@@ -13,6 +13,7 @@ export interface EditorButton extends ToolbarBaseItem {
   type: ToolbarItemType.Button;
   command: ExecCommand;
   icon: string;
+  btnText?: string;
   title?: string;
 }
 
@@ -30,6 +31,7 @@ export interface EditorInput extends ToolbarBaseItem {
   text: string;
   title?: string;
   label?: string;
+  btnText?: string;
   transform?: (val: string) => string;
 }
 

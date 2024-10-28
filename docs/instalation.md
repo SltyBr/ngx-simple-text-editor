@@ -1,10 +1,10 @@
 # 🚀 Instalation
 
-`npm install ngx-simple-text-editor --save`
+`npm install bii-text-editor --save`
 
 then add `NgxSimpleTextEditorModule` into module imports
 ```typescript
-import {NgxSimpleTextEditorModule} from 'ngx-simple-text-editor';
+import {NgxSimpleTextEditorModule} from 'bii-text-editor';
 
 @NgModule({
 // ...

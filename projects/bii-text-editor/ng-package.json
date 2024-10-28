@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/ngx-simple-text-editor",
+  "dest": "../../dist/bii-text-editor",
   "lib": {
     "entryFile": "src/public-api.ts"
   }

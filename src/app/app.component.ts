@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {EditorConfig, ST_BUTTONS} from 'ngx-simple-text-editor';
+import {EditorConfig, ST_BUTTONS} from 'bii-text-editor';
 
 @Component({
   selector: 'app-root',
